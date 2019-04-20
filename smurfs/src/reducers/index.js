@@ -59,7 +59,7 @@ function rootReducer (state=initialState, action){
   }
 }
 
-export default rootReducer
+export default rootReducer;
 /*
   You'll only need one smurf reducer for this project.
   Feel free to export it as a default and import as rootReducer. 

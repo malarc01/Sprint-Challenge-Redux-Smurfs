@@ -22,3 +22,19 @@ export const CREATING_SMURF = "CREATING_SMURF";
    U - updateSmurf
    D - deleteSmurf
 */
+export const getSmurfs = () =>dispatch =>{
+  console.log('start of getSmurfs function')
+  dispatch({type:GETTING_SMURF});
+  axios.get('http:/localhost:3333/smurfs')
+  .then(res=>dispatch({type:GET_FETCH,payload:res.data}))
+  .catch(error=>{dispatch({type:GET_FAIL,payload:error})})
+}
+
+export const createSmurf = smurfObject => {
+  return dispatch =>{
+    dispatch({type:CREATING_SMURF});
+    axios.post('http://localhost:3333/smurfs',smurfObject)
+    .then()
+    .catch(err=>{dispatch({type:GET_FAIL,payload:err})})
+  }
+}

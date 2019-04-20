@@ -1,3 +1,12 @@
+import axios from 'axios'
+
+export const GET_FETCH="GET_FETCH";
+export const GETTING_SMURF = 'GETTING_SMURF'
+export const GET_FAIL = "GET_FAIL";
+
+export const POST_CREATE = "POST_CREATE";
+export const CREATING_SMURF = "CREATING_SMURF";
+
 /* 
   Action Types Go Here!
   Be sure to export each action type so you can pull it into your reducer

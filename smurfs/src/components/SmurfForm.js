@@ -16,14 +16,14 @@ addSmurf = event =>{
     console.log('addSmurf function invoked');
     let smurfObject={
         name: this.state.name,
-        age: parseInt(thi.state.age,10),
+        age: parseInt(this.state.age,10),
         height: this.state.height
     }
     this.props.createSmurf(smurfObject)
     this.setState({
     name: '',
     age: '',
-    height:"",
+    height:'',
 
     });
 }
@@ -51,7 +51,7 @@ render(){
         />
         <input
             onChange = {this.handleInputChange}
-            placeholder="name"
+            placeholder="height"
             value={this.state.height}
             name="height"
         />

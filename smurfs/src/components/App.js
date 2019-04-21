@@ -14,7 +14,7 @@ class App extends Component {
 
 componentDidMount(){
   console.log('inside CDM & getSmurf fx');
-  this.props.getSmurf()
+  this.props.getSmurfs();
 }
 
 
@@ -36,7 +36,9 @@ componentDidMount(){
        id={smurf.id} 
        age={smurf.age} 
        height={smurf.height} 
-       key={smurf.id}/>);})}
+       key={smurf.id}/>
+      );
+      })}
        </ul>
       </div>
     );
